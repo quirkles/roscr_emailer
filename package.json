@@ -1,0 +1,40 @@
+{
+  "name": "roscr_emailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "morgan": "^1.8.1",
+    "nodemailer": "^3.0.2",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.10.0",
+    "eslint-plugin-eslint-snake-case": "0.0.6",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.5.4"
+  },
+  "scripts": {
+    "babelify": "babel src -d dist --copy-files",
+    "build": "npm run clean && npm run babelify",
+    "clean": "rimraf dist",
+    "dev": "nodemon --exec babel-node --presets=latest -- src/app.js",
+    "start": "npm run build && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quirkles/roscr_emailer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quirkles/roscr_emailer/issues"
+  },
+  "homepage": "https://github.com/quirkles/roscr_emailer#readme"
+}
